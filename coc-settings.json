@@ -1,0 +1,10 @@
+{
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "diagnostic.displayByAle": true,
+    "coc.source.around.firstMatch": false,
+    "coc.source.buffer.firstMatch": false,
+    "semanticTokens.filetypes": ["*"],
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk-18.jdk/Contents/Home",
+    "snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
+}
