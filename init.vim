@@ -5,7 +5,7 @@ set nocompatible
 set runtimepath+=~/.config/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state(expand('~/.config/dein'))
     call dein#begin(expand('~/.config/dein'), expand('~/.vimrc'))
-    " Code display{{{2
+    " Code display{{{4
     call dein#add('rakr/vim-one')
     call dein#add('sonph/onehalf', {
                 \ 'rtp': 'vim'
@@ -40,6 +40,7 @@ if dein#load_state(expand('~/.config/dein'))
     " Utility{{{2
     call dein#add('easymotion/vim-easymotion')
     call dein#add('tpope/vim-surround')
+    call dein#add('unblevable/quick-scope')
 
     " Language{{{2
     call dein#add('python-mode/python-mode', {
@@ -172,6 +173,13 @@ let g:airline_theme='gruvbox'
 " vim-gitgutter options{{{3
 let g:gitgutter_map_keys = 0
 let g:gitgutter_diff_base = 'HEAD'
+
+" Utility{{{2
+" Quickscope{{{3
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+highlight QuickScopePrimary guifg='#f653a6' gui=underline ctermfg=0 cterm=underline
+highlight QuickScopeSecondary guifg='#e3ff4a' gui=underline ctermfg=50 cterm=underline
+
 " Filesystem{{{2
 " NERDTree{{{3
 
