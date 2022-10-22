@@ -31,6 +31,7 @@ if dein#load_state(expand('~/.config/dein'))
     call dein#add('tpope/vim-fugitive')
     call dein#add('idanarye/vim-merginal')
     call dein#add('kdheepak/lazygit.nvim')
+    call dein#add('ilyachur/cmake4vim')
 
     " Interface{{{2
     call dein#add('vim-airline/vim-airline')
@@ -242,22 +243,22 @@ noremap <Leader>p "*p
 if has('nvim')
     nnoremap <C-l> :Telescope live_grep<CR>
     nnoremap <C-e> :Telescope buffers<CR>
-    nnoremap <C-c> :Telescope git_commits<CR>
 
     silent! !git rev-parse --is-inside-work-tree
     if v:shell_error == 0
-    nnoremap <leader>i :Telescope git_files<CR>
+        nnoremap <leader>i :Telescope git_files<CR>
+        nnoremap <C-c> :Telescope git_commits<CR>
     else
-    nnoremap <leader>i :Telescope find_files<CR>
+        nnoremap <leader>i :Telescope find_files<CR>
     endif
 else
     nnoremap <C-L> :Rg<CR>
     nnoremap <C-e> :Buffers<CR>
-    nnoremap <C-c> :Commits<CR>
 
     silent! !git rev-parse --is-inside-work-tree
     if v:shell_error == 0
         nnoremap <leader>i :GFiles<CR>
+        nnoremap <C-c> :Commits<CR>
     else
         nnoremap <leader>i :Files<CR>
     endif
