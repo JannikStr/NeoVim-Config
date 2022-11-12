@@ -5,7 +5,7 @@ set nocompatible
 set runtimepath+=~/.config/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state(expand('~/.config/dein'))
     call dein#begin(expand('~/.config/dein'), expand('~/.vimrc'))
-    " Code display{{{4
+" Code display{{{4
     call dein#add('rakr/vim-one')
     call dein#add('sonph/onehalf', {
                 \ 'rtp': 'vim'
@@ -32,6 +32,7 @@ if dein#load_state(expand('~/.config/dein'))
     call dein#add('idanarye/vim-merginal')
     call dein#add('kdheepak/lazygit.nvim')
     call dein#add('ilyachur/cmake4vim')
+    call dein#add('rust-lang/rust.vim')
 
     " Interface{{{2
     call dein#add('vim-airline/vim-airline')
@@ -50,6 +51,7 @@ if dein#load_state(expand('~/.config/dein'))
                 \ })
 
     call dein#add('raimon49/requirements.txt.vim')
+    call dein#add('fatih/vim-go')
 
     " Filesystem{{{2
     call dein#add('junegunn/fzf', { 'build': './install', 'merged': 0})
@@ -104,6 +106,8 @@ let g:coc_global_extensions = [
             \ 'coc-tsserver',
             \ 'coc-vimlsp',
             \ 'coc-yaml',
+            \ 'coc-rust-analyzer',
+            \ 'coc-go'
             \ ]
 let g:coc_filetype_map = {
             \ 'jinja.html': 'html'
@@ -347,8 +351,8 @@ nmap <Leader>c <Plug>(easymotion-jumptoanywhere)
 " Options{{{1
 " Behavior{{{2
 filetype plugin indent on
-let g:python_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 set autoindent
 set autoread
 set autowrite
