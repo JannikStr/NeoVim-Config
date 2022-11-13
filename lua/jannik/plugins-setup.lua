@@ -102,6 +102,9 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive")
 	use("airblade/vim-gitgutter")
 
+	-- motions
+	use("easymotion/vim-easymotion")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

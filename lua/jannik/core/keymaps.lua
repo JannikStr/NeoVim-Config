@@ -24,8 +24,8 @@ keymap.set("n", "<Right>", "<Nop>")
 --   Saving and exiting
 keymap.set("n", "qx", ":bp|bd #<CR>")
 keymap.set("n", "qs", ":x<CR>")
-keymap.set("n", "qq", ":w<CR>")
-keymap.set("n", "qa", ":wa<CR>")
+keymap.set("n", "qq", ":w!<CR>")
+keymap.set("n", "qa", ":wa!<CR>")
 
 --   Split views
 keymap.set("n", "<Leader>sv", "<C-w>v")
@@ -47,7 +47,7 @@ keymap.set("n", "<Leader>q", ":NvimTreeToggle<CR>")
 
 --   telescope
 keymap.set("n", "<C-e>", "<cmd>Telescope buffers<CR>")
-keymap.set("n", "<C-l>", "<cmd>Telescope live_grep<CR>")
+keymap.set("n", "<Leader>l", "<cmd>Telescope live_grep<CR>")
 keymap.set("n", "<C-e>", "<cmd>Telescope buffers<CR>")
 keymap.set("n", "<C-c>", "<cmd>Telescope git_commits<CR>")
 if checks.is_git_available() then
@@ -68,3 +68,6 @@ keymap.set("n", "<Leader>gsp", ":Git push<CR>")
 keymap.set("n", "<Leader>gsf", ":Git push -f<CR>")
 
 keymap.set("n", "<Leader>gdo", ":GitGutterDiffOrig<CR>")
+
+--   EasyMotion
+keymap.set("n", ",", "<Plug>(easymotion-prefix)")

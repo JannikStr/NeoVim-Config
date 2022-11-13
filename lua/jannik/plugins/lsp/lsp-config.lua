@@ -27,7 +27,7 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "<Leader>mq", "<cmd>Lspsaga code_action<CR>", opts)
 	keymap.set("n", "<Leader>mr", "<cmd>Lspsaga rename<CR>", opts)
 	keymap.set("n", "<Leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
-	keymap.set("n", "<Leader>f", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
+	keymap.set("n", "<Leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
 	keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
@@ -83,6 +83,56 @@ lspconfig["sumneko_lua"].setup({
 })
 
 lspconfig["rust_analyzer"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["bashls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["cmake"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["dockerls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["gopls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["jsonls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["jdtls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["julials"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["marksman"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["jedi_language_server"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
