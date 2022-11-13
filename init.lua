@@ -11,6 +11,7 @@ require("jannik.plugins.telescope")
 require("jannik.plugins.nvim-cmp")
 require("jannik.plugins.autopairs")
 require("jannik.plugins.treesitter")
+require("jannik.plugins.barbar")
 
 --  lsp
 require("jannik.plugins.lsp.mason")
