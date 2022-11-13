@@ -282,6 +282,8 @@ nnoremap <Leader>gu :Git rebase upstream/develop<CR>
 nnoremap <Leader>gsp :Git push<CR>
 nnoremap <Leader>gsf :Git push -f<CR>
 
+nnoremap <Leader>gdo :GitGutterDiffOrig<CR>
+
 " Completion{{{2
 " coc.nvim bindings{{{3
 " Use tab and Shift-tab to navigate completion
