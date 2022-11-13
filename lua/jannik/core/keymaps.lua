@@ -38,6 +38,10 @@ keymap.set("n", "<Leader>tx", ":tabclose<CR>")
 keymap.set("n", "<Leader>tn", ":tabn<CR>")
 keymap.set("n", "<Leader>tp", ":tabp<CR>")
 
+--   Resizing
+keymap.set("n", ">", ":vertical resize +3<CR>", { silent = true })
+keymap.set("n", "<", ":vertical resize -3<CR>", { silent = true })
+
 -- Plugin keymaps
 --   vim-maximizer
 keymap.set("n", "<Leader>sm", ":MaximizerToggle<CR>")

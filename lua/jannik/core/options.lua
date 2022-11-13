@@ -5,8 +5,8 @@ opt.relativenumber = true
 opt.number = true
 
 -- tabs & itendation
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
@@ -30,5 +30,8 @@ opt.backspace = "indent,eol,start"
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+
+-- mouse interaction
+opt.mouse = nil
 
 opt.iskeyword:append("-")

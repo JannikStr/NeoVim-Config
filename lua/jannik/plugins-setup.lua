@@ -52,7 +52,8 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 
 	-- fuzzyfinding
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+    use("junegunn/fzf")
+    use("nvim-telescope/telescope-fzf-native.nvim")
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
 	-- show buffers at top
@@ -85,6 +86,8 @@ return packer.startup(function(use)
 	-- linting
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
+
+	use("ntpeters/vim-better-whitespace")
 
 	-- treesitter
 	use({
