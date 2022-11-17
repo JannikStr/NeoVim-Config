@@ -74,4 +74,4 @@ keymap.set("n", "<Leader>gsf", ":Git push -f<CR>")
 keymap.set("n", "<Leader>gdo", ":GitGutterDiffOrig<CR>")
 
 --   EasyMotion
-keymap.set("n", ",", "<Plug>(easymotion-prefix)")
+keymap.set("n", "<Leader>", "<Plug>(easymotion-prefix)")

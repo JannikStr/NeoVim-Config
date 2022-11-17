@@ -5,3 +5,9 @@ api.nvim_create_user_command("SourceConfig", function()
 end, {
 	nargs = 0,
 })
+
+api.nvim_create_user_command("ToggleAutoFormatting", function()
+	vim.g.disable_formatting = not vim.g.disable_formatting
+end, {
+	nargs = 0,
+})

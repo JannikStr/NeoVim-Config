@@ -31,7 +31,9 @@ opt.backspace = "indent,eol,start"
 opt.splitright = true
 opt.splitbelow = true
 
--- mouse interaction
+-- disable mouse interaction
 opt.mouse = nil
 
 opt.iskeyword:append("-")
+
+vim.g.disable_formatting = true

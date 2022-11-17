@@ -3,6 +3,7 @@ require("jannik.core.options")
 require("jannik.core.colorscheme")
 require("jannik.core.keymaps")
 require("jannik.core.commands")
+require("jannik.core.autocommands")
 
 -- Plugin configurations
 require("jannik.plugins.comment")
