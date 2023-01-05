@@ -6,7 +6,7 @@ local keymap = vim.keymap
 
 -- general keymaps
 keymap.set({ "v", "n" }, "Y", "y$")
-keymap.set("i", "ii", "<ESC>")
+-- keymap.set("i", "ii", "<ESC>")
 
 keymap.set("v", "<Leader>y", '"*y')
 keymap.set({ "n", "v" }, "<Leader>p", '"*p')
@@ -41,6 +41,12 @@ keymap.set("n", "<Leader>tp", ":tabp<CR>")
 --   Resizing
 keymap.set("n", ">", ":vertical resize +3<CR>", { silent = true })
 keymap.set("n", "<", ":vertical resize -3<CR>", { silent = true })
+
+-- Search
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "n", "nzz")
+keymap.set("n", "N", "Nzz")
 
 -- Plugin keymaps
 --   vim-maximizer

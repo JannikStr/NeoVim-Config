@@ -89,6 +89,8 @@ return packer.startup(function(use)
 
 	use("ntpeters/vim-better-whitespace")
 
+    use("xiyaowong/nvim-transparent")
+
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",

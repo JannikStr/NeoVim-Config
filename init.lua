@@ -15,6 +15,7 @@ require("jannik.plugins.autopairs")
 require("jannik.plugins.treesitter")
 require("jannik.plugins.barbar")
 require("jannik.plugins.betterwhitespace")
+require("jannik.plugins.nvim-transparent")
 
 --  lsp
 require("jannik.plugins.lsp.mason")
