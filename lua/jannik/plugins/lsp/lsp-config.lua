@@ -43,6 +43,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 lspconfig["html"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+    filetypes = { 'html', 'htmldjango' },
 })
 
 typescript.setup({
@@ -53,11 +54,6 @@ typescript.setup({
 })
 
 lspconfig["cssls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
