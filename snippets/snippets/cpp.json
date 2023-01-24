@@ -1,0 +1,105 @@
+{
+  "operator<<": {
+    "prefix": "op<<",
+    "description": "Overload << operator",
+    "body": [
+      "friend std::ostream& operator<<(std::ostream& stream, const ${0:className}& obj);"
+    ]
+  },
+  "operator>>": {
+    "prefix": "op>>",
+    "description": "Overload >> operator",
+    "body": "friend std::ostream& operator>>(std::istream& stream, ${0:className}& obj);"
+  },
+  "operator+=": {
+    "prefix": "op+=",
+    "description": "Overload += operator",
+    "body": "${0:className}& operator+=(const ${0:className}& rhs);"
+  },
+  "operator-=": {
+    "prefix": "op-=",
+    "description": "Overload += operator",
+    "body": "${0:className}& operator-=(const ${0:className}& rhs);"
+  },
+  "operator*=": {
+    "prefix": "op*=",
+    "description": "Overload *= operator",
+    "body": "${0:className}& operator*=(const ${0:className}& rhs);"
+  },
+  "operator/=": {
+    "prefix": "op/=",
+    "description": "Overload /= operator",
+    "body": "${0:className}& operator/=(const ${0:className}& rhs);"
+  },
+  "operator+": {
+    "prefix": "op+",
+    "description": "Overload + operator",
+    "body": "friend ${0:className} operator+(const ${0:className}& lhs, const ${0:className}& rhs);"
+  },
+  "operator-": {
+    "prefix": "op-",
+    "description": "Overload - operator",
+    "body": "friend ${0:className} operator-(const ${0:className}& lhs, const ${0:className}& rhs);"
+  },
+  "operator*": {
+    "prefix": "op*",
+    "description": "Overload * operator",
+    "body": "friend ${0:className} operator*(const ${0:className}& lhs, const ${0:className}& rhs);"
+  },
+  "operator/": {
+    "prefix": "op/",
+    "description": "Overload / operator",
+    "body": "friend ${0:className} operator/(const ${0:className}& lhs, const ${0:className}& rhs);"
+  },
+  "literal": {
+    "prefix": "literal",
+    "description": "Create a custom literal",
+    "body": [
+      "/* ",
+      "Zeichen-Literale: char, wchar_t, char8_t, char16_t oder char32_t",
+      "Ganzzahl: unsigned long long | Fließkomma: long double",
+      "*/",
+      "${0:className} operator\"\" _a(unsigned long long value);"
+    ]
+  },
+  "postfix-incrementation": {
+    "prefix": "post++",
+    "description": "Postfix incrementation v++",
+    "body": "${0:className} operator++(int);"
+  },
+  "prefix-incrementation": {
+    "prefix": "++post",
+    "description": "Prefix incrementation ++v",
+    "body": "${0:className}& operator++();"
+  },
+  "sign+": {
+    "prefix": "sign+",
+    "description": "Overload + sign",
+    "body": "${0:className} operator+();"
+  },
+  "template<<": {
+    "prefix": "template<<",
+    "description": "Overload << operator when using templates",
+    "body": [
+      "// Above class",
+      "template<typename T>",
+      "class ${0:className};",
+      "",
+      "template<typename T>",
+      "std::ostream& operator<<(std::ostream&,const ${0:className}<T>&);",
+      "// Inside class",
+      "friend std::ostream& operator<< <T>(std::ostream&, const ${0:className}&);",
+      "",
+      "//Below class",
+      "template<typename T>",
+      "std::ostream& operator<<(std::ostream& stream, const ${0:className}<T>& obj);"
+    ]
+  },
+  "mvConstructor": {
+    "prefix": "mvCon",
+    "description": "Move constructor",
+    "body": [
+      "${0:className}(${0:className}&& obj);"
+    ]
+  }
+}

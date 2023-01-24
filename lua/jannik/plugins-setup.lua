@@ -68,6 +68,7 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
+    use("honza/vim-snippets")
 
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim")
