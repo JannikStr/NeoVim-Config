@@ -108,8 +108,6 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive")
 	use("airblade/vim-gitgutter")
 
-    use("ludovicchabant/vim-gutentags")
-
 	-- motions
 	use("easymotion/vim-easymotion")
 

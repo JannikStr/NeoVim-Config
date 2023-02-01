@@ -18,7 +18,7 @@ opt.ignorecase = false
 
 -- cursor line
 opt.cursorline = true
-opt.scroll = 8
+opt.scrolloff = 8
 
 -- appearence
 opt.termguicolors = true

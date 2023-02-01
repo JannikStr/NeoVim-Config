@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
 
 	-- set keybinds
 	keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts)
-	keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+	keymap.set("n", "gD", "<cmd>Lspsaga goto_definition<CR>", opts)
 	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
 	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	keymap.set("n", "<Leader>mq", "<cmd>Lspsaga code_action<CR>", opts)
@@ -126,4 +126,9 @@ lspconfig["marksman"].setup({
 lspconfig["jedi_language_server"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+lspconfig["fortls"].setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
 })
