@@ -81,3 +81,6 @@ keymap.set("n", "<Leader>gdo", ":GitGutterDiffOrig<CR>")
 
 --   EasyMotion
 keymap.set("n", "<Leader>", "<Plug>(easymotion-prefix)")
+
+--   Toggle Transparency
+keymap.set("n", "<Leader>dt", ":TransparentToggle<CR>")

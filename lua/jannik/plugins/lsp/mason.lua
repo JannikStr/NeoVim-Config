@@ -20,7 +20,7 @@ mason_lspconfig.setup({
 		"tsserver",
 		"html",
 		"cssls",
-		"sumneko_lua",
+		"lua_ls",
 		"rust_analyzer",
 		"bashls",
 		"clangd",
