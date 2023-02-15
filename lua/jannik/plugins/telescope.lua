@@ -14,6 +14,11 @@ if not previewer_setup then
     return
 end
 
+local simulators_setup, simulators = pcall(require, "simulators")
+if not simulators_setup then
+    return
+end
+
 local _bad_files = { '.*%.csv' }
 
 local bad_files = function (filepath)
@@ -53,4 +58,10 @@ telescope.setup({
     }
 })
 
+simulators.setup({
+    android_emulator = false,
+    apple_simulator = true,
+})
+
 telescope.load_extension("fzf")
+telescope.load_extension("simulators")
