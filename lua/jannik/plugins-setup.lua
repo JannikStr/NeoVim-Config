@@ -112,6 +112,9 @@ return packer.startup(function(use)
 	-- motions
 	use("easymotion/vim-easymotion")
 
+    -- latex and writing
+    use("lervag/vimtex")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
