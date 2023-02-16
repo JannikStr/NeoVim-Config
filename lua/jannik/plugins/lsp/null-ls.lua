@@ -12,7 +12,18 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
+        formatting.fprettify,
+        formatting.fixjson,
+        formatting.clang_format,
 		diagnostics.eslint_d,
+        diagnostics.mypy.with({
+            extra_args={"--ignore-missing-imports"}
+        }),
+        diagnostics.flake8.with({
+            extra_args={"--max-line-length", "119"}
+        }),
+        diagnostics.cppcheck,
+        diagnostics.cpplint,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
