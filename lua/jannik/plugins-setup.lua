@@ -111,6 +111,7 @@ return packer.startup(function(use)
 
 	-- motions
 	use("easymotion/vim-easymotion")
+    use("ludovicchabant/vim-gutentags")
 
     -- latex and writing
     use("lervag/vimtex")
