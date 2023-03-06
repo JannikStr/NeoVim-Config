@@ -128,13 +128,19 @@ lspconfig["jedi_language_server"].setup({
 	on_attach = on_attach,
 })
 
-lspconfig["fortls"].setup({
-    capabilities = capabilities,
-    on_attach = on_attach,
-    cmd ={
-        'fortls', '--symbol_skip_men', '--incremental_sync', '--autocomplete_no_prefix', '--autocomplete_name_only', '--debug_log'
-    }
-})
+
+lspconfig.fortls.setup{
+	-- capabilities = capabilities,
+	-- on_attach = on_attach,
+    cmd = {
+        'fortls',
+        '--lowercase_intrinsics',
+        '--notify_init',
+        '--hover_signature',
+        '--hover_language=fortran',
+        '--use_signature_help',
+    },
+}
 
 lspconfig["texlab"].setup({
     capabilities = capabilities,
