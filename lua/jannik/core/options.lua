@@ -38,3 +38,4 @@ opt.mouse = nil
 opt.iskeyword:append("-")
 
 vim.g.disable_formatting = true
+vim.g.python3_host_prog = os.getenv("HOME") .. "/.nvim_venv/bin/python3"
