@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use("nvim-telescope/telescope-fzf-native.nvim")
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
     use("dimaportenko/telescope-simulators.nvim")
+    use("folke/todo-comments.nvim")
 
 	-- show buffers at top
 	use("romgrk/barbar.nvim")

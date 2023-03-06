@@ -19,6 +19,11 @@ if not simulators_setup then
     return
 end
 
+local todo_comments_setup, todo_comments = pcall(require, "todo-comments")
+if not todo_comments_setup then
+    return
+end
+
 local _bad_files = { '.*%.csv' }
 
 local bad_files = function (filepath)
@@ -62,6 +67,8 @@ simulators.setup({
     android_emulator = false,
     apple_simulator = true,
 })
+
+todo_comments.setup({})
 
 telescope.load_extension("fzf")
 telescope.load_extension("simulators")
