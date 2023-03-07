@@ -109,6 +109,7 @@ return packer.startup(function(use)
 	-- git integration
 	use("tpope/vim-fugitive")
 	use("airblade/vim-gitgutter")
+    use("sindrets/diffview.nvim")
 
 	-- motions
 	use("easymotion/vim-easymotion")
