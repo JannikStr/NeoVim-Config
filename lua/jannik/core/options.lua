@@ -10,6 +10,8 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
+opt.colorcolumn = "120"
+
 -- line wrapping
 opt.wrap = false
 

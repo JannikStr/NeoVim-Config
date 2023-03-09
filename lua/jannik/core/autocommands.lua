@@ -9,3 +9,8 @@ api.nvim_create_autocmd("FileType", {
 	command = "set tabstop=4 shiftwidth=4",
 	group = doubleIdentationGroup,
 })
+
+api.nvim_create_autocmd("FileType", {
+    pattern = { "fortran" },
+    command = "set cc=70"
+})
