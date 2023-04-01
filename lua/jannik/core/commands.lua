@@ -11,3 +11,22 @@ api.nvim_create_user_command("ToggleAutoFormatting", function()
 end, {
 	nargs = 0,
 })
+
+api.nvim_create_user_command("Todo", function ()
+    vim.cmd("Glow notes/todo.md")
+end, {
+    nargs = 0,
+})
+
+api.nvim_create_user_command("EditTodo", function ()
+    vim.cmd("e notes/todo.md")
+end, {
+    nargs = 0
+})
+
+api.nvim_create_user_command("ToggleMypyStrict", function ()
+    print("Currently not implemented!")
+end, {
+    nargs = 0,
+})
+

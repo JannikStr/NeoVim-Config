@@ -85,6 +85,27 @@ return packer.startup(function(use)
 
 	-- programming language plugins
 	use("simrat39/rust-tools.nvim")
+    use({
+        "gbprod/phpactor.nvim",
+        run = require('phpactor.handler.update'),
+    })
+
+    -- Debug Adapter Protocol
+    use("ravenxrz/DAPInstall.nvim")
+    use("theHamsta/nvim-dap-virtual-text")
+    use("rcarriga/nvim-dap-ui")
+    use("mfussenegger/nvim-dap-python")
+    use("nvim-telescope/telescope-dap.nvim")
+    use({"jbyuki/one-small-step-for-vimkind", module = "osv" })
+    use({
+        "mfussenegger/nvim-dap",
+        opt = true,
+        event = "BufReadPre",
+        module = { "dap" },
+        config = function ()
+            require('jannik.plugins.dap').setup()
+        end
+    })
 
 	-- linting
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -117,6 +138,10 @@ return packer.startup(function(use)
 
     -- latex and writing
     use("lervag/vimtex")
+
+    -- note taking
+    use("vimwiki/vimwiki")
+    use("ellisonleao/glow.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

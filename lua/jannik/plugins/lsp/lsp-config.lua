@@ -146,3 +146,15 @@ lspconfig["texlab"].setup({
     capabilities = capabilities,
     on_attach = on_attach,
 })
+
+lspconfig["intelephense"].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+lspconfig["ltex"].setup({
+    on_attach = on_attach,
+    cmd = { "ltex-ls" },
+    filetypes = {"markdown", "text", "latex", "tex"},
+    flags = { debounce_text_changes = 300 },
+})

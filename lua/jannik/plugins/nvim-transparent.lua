@@ -12,7 +12,11 @@ transparent.setup({
         "BufferLineBackground",
         "BufferLineSeperator",
         "BufferLineIndicatorSelected",
-        "CursorLine"
+        "CursorLine",
+        "TelescopeBorder",
+        "TelescopePreviewNormal",
+        "TelescopePromptNormal",
+        "TelescopeResultsNormal"
     },
-    exclude = {},
+    exclude_groups = {},
 });

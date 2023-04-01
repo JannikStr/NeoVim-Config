@@ -9,6 +9,11 @@ if not actions_setup then
     return
 end
 
+local action_state_setup, action_state = pcall(require, "telescope.actions.state")
+if not action_state_setup then
+    return
+end
+
 local previewer_setup, previewers = pcall(require, "telescope.previewers")
 if not previewer_setup then
     return
@@ -58,6 +63,23 @@ telescope.setup({
                 ["<C-k>"] = actions.move_selection_previous,
                 ["<C-j>"] = actions.move_selection_next,
                 ["C-q"] = actions.send_selected_to_qflist + actions.open_qflist,
+            }
+        },
+        pickers = {
+            git_commits = {
+                mappings = {
+                    i = {
+                        ["<C-s>"] = function ()
+                            local selected_entry = action_state.get_selected_entry()
+
+                            vim.api.nvim_win_close(0, true)
+                            vim.cmd("stopinsert")
+                            vim.schedule_wrap(function ()
+                                vim.cmd(("DiffviewOpen %s^!"):format(selected_entry.value))
+                            end)
+                        end,
+                    }
+                }
             }
         }
     }

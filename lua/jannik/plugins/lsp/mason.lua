@@ -32,7 +32,8 @@ mason_lspconfig.setup({
 		"marksman",
 		"jedi_language_server",
         "fortls",
-        "texlab"
+        "texlab",
+        "phpactor"
 	},
 })
 
