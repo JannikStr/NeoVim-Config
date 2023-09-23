@@ -158,3 +158,8 @@ lspconfig["ltex"].setup({
     filetypes = {"markdown", "text", "latex", "tex"},
     flags = { debounce_text_changes = 300 },
 })
+
+lspconfig["gopls"].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})

@@ -85,10 +85,8 @@ return packer.startup(function(use)
 
 	-- programming language plugins
 	use("simrat39/rust-tools.nvim")
-    use({
-        "gbprod/phpactor.nvim",
-        run = require('phpactor.handler.update'),
-    })
+    use("ray-x/go.nvim")
+     -- use({ "gbprod/phpactor.nvim", run = require('phpactor.handler.update'), })
 
     -- Debug Adapter Protocol
     use("ravenxrz/DAPInstall.nvim")
