@@ -6,6 +6,7 @@ end
 --recommended settings
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.nvim_tree_group_empty = 1
 
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#4FC5FF ]])
 

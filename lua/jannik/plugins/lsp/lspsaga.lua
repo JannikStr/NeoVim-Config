@@ -11,4 +11,7 @@ saga.setup({
     definition_action_keys = {
         edit = "<CR>",
     },
+    code_action_prompt = {
+        enable = false,
+    },
 })

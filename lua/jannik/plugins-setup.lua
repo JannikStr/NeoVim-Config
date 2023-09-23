@@ -34,6 +34,7 @@ return packer.startup(function(use)
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer") -- maximizing and restoring current views
+    use("simeji/winresizer") -- resizing
 
 	-- essentials
 	use("tpope/vim-surround")
@@ -53,6 +54,7 @@ return packer.startup(function(use)
 
 	-- fuzzyfinding
     use("junegunn/fzf")
+    use("nvim-lua/popup.nvim")
     use("nvim-telescope/telescope-fzf-native.nvim")
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
     use("dimaportenko/telescope-simulators.nvim")
@@ -138,8 +140,13 @@ return packer.startup(function(use)
     use("lervag/vimtex")
 
     -- note taking
-    use("vimwiki/vimwiki")
-    use("ellisonleao/glow.nvim")
+    -- use("vimwiki/vimwiki")
+    -- use("ellisonleao/glow.nvim")
+
+    -- build tasks
+    use("skywind3000/asynctasks.vim")
+    use("skywind3000/asyncrun.vim")
+    use("GustavoKatel/telescope-asynctasks.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

@@ -37,6 +37,8 @@ keymap.set("n", "<Leader>to", ":tabnew<CR>")
 keymap.set("n", "<Leader>tx", ":tabclose<CR>")
 keymap.set("n", "<Leader>tn", ":tabn<CR>")
 keymap.set("n", "<Leader>tp", ":tabp<CR>")
+keymap.set("n", "<Ctrl>n", ":BufferNext<CR>")
+keymap.set("n", "<Ctrl>p", ":BufferPrev<CR>")
 
 --   Resizing
 keymap.set("n", ">", ":vertical resize +3<CR>", { silent = true })
@@ -60,6 +62,7 @@ keymap.set("n", "<C-e>", "<cmd>Telescope buffers<CR>")
 keymap.set("n", "<Leader>l", "<cmd>Telescope live_grep<CR>")
 keymap.set("n", "<C-e>", "<cmd>Telescope buffers<CR>")
 keymap.set("n", "<C-c>", "<cmd>Telescope git_commits<CR>")
+keymap.set("n", "<Leader>r", "<cmd> lua require('telescope').extensions.asynctasks.all()<CR>")
 if checks.is_git_available() then
 	keymap.set("n", "<Leader>i", "<cmd>Telescope git_files<CR>")
 else

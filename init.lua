@@ -6,6 +6,7 @@ require("jannik.core.commands")
 require("jannik.core.autocommands")
 
 -- Plugin configurations
+require("jannik.plugins.asynctasks")
 require("jannik.plugins.autopairs")
 require("jannik.plugins.barbar")
 require("jannik.plugins.betterwhitespace")
@@ -19,6 +20,7 @@ require("jannik.plugins.nvim-tree")
 require("jannik.plugins.telescope")
 require("jannik.plugins.treesitter")
 require("jannik.plugins.vimtex")
+require("jannik.plugins.winresizer")
 
 --  lsp
 require("jannik.plugins.lsp.lspsaga")
