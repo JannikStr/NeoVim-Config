@@ -35,6 +35,7 @@ return packer.startup(function(use)
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer") -- maximizing and restoring current views
     use("simeji/winresizer") -- resizing
+    use("ThePrimeagen/harpoon")
 
 	-- essentials
 	use("tpope/vim-surround")
@@ -123,6 +124,8 @@ return packer.startup(function(use)
 		end,
 	})
 
+    use('nvim-treesitter/playground')
+
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
@@ -131,6 +134,7 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive")
 	use("airblade/vim-gitgutter")
     use("sindrets/diffview.nvim")
+    use("mbbill/Undotree")
 
 	-- motions
 	use("easymotion/vim-easymotion")
