@@ -22,6 +22,8 @@ keymap.set("n", "<Down>", "<Nop>")
 keymap.set("n", "<Right>", "<Nop>")
 
 --   Saving and exiting
+keymap.set("n", "Q", "q")
+keymap.set("n", "q", "<Nop>")
 keymap.set("n", "qx", ":bp|bd #<CR>")
 keymap.set("n", "qs", ":x<CR>")
 keymap.set("n", "qq", ":w!<CR>")
@@ -37,8 +39,8 @@ keymap.set("n", "<Leader>to", ":tabnew<CR>")
 keymap.set("n", "<Leader>tx", ":tabclose<CR>")
 keymap.set("n", "<Leader>tn", ":tabn<CR>")
 keymap.set("n", "<Leader>tp", ":tabp<CR>")
-keymap.set("n", "<Ctrl>n", ":BufferNext<CR>")
-keymap.set("n", "<Ctrl>p", ":BufferPrev<CR>")
+keymap.set("n", "<C-n>", ":BufferNext<CR>")
+keymap.set("n", "<C-p>", ":BufferPrev<CR>")
 
 --   Resizing
 keymap.set("n", ">", ":vertical resize +3<CR>", { silent = true })
@@ -87,3 +89,10 @@ keymap.set("n", "<Leader>", "<Plug>(easymotion-prefix)")
 
 --   Toggle Transparency
 keymap.set("n", "<Leader>dt", ":TransparentToggle<CR>")
+
+
+---------DevOps---------
+------------------------
+
+--   Dadbod
+keymap.set("n", "<Leader>db", ":DBUIToggle<CR>")

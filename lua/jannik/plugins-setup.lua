@@ -152,6 +152,10 @@ return packer.startup(function(use)
     use("skywind3000/asyncrun.vim")
     use("GustavoKatel/telescope-asynctasks.nvim")
 
+    -- DevOps
+    use("tpope/vim-dadbod")
+    use("kristijanhusak/vim-dadbod-ui")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
