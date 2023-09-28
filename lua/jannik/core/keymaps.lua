@@ -95,4 +95,4 @@ keymap.set("n", "<Leader>dt", ":TransparentToggle<CR>")
 ------------------------
 
 --   Dadbod
-keymap.set("n", "<Leader>db", ":DBUIToggle<CR>")
+keymap.set("n", "<Leader>x", ":DBUIToggle<CR>")
