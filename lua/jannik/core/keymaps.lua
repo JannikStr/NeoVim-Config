@@ -6,6 +6,7 @@ local keymap = vim.keymap
 
 -- general keymaps
 keymap.set({ "v", "n" }, "Y", "y$")
+keymap.set("n", "*", ":keepjumps normal! mi*`i<CR>")
 -- keymap.set("i", "ii", "<ESC>")
 
 keymap.set("v", "<Leader>y", '"*y')
