@@ -14,4 +14,7 @@ saga.setup({
     code_action_prompt = {
         enable = false,
     },
+    lightbulb = {
+        enable = false,
+    },
 })

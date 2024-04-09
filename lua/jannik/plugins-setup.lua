@@ -69,6 +69,9 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 
+    -- AI
+    use("Exafunction/codeium.vim")
+
 	-- snippets
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
@@ -130,9 +133,13 @@ return packer.startup(function(use)
     use("skywind3000/asyncrun.vim")
     use("GustavoKatel/telescope-asynctasks.nvim")
 
+
     -- DevOps
     use("tpope/vim-dadbod")
     use("kristijanhusak/vim-dadbod-ui")
+
+    -- Language/Grammar Check
+    use('rhysd/vim-grammarous')
 
 	if packer_bootstrap then
 		require("packer").sync()
