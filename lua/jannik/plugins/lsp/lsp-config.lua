@@ -20,7 +20,7 @@ local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
 	-- set keybinds
-	keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts)
+	keymap.set("n", "gr", "<cmd>Lspsaga finder<CR>", opts)
 	keymap.set("n", "gD", "<cmd>Lspsaga goto_definition<CR>", opts)
 	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
 	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
@@ -157,9 +157,21 @@ lspconfig["ltex"].setup({
     cmd = { "ltex-ls" },
     filetypes = {"markdown", "text", "latex", "tex"},
     flags = { debounce_text_changes = 300 },
+    settings = {
+        ltex = {
+            language = "de-DE"
+        }
+    }
 })
 
 lspconfig["gopls"].setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
+
+lspconfig["tailwindcss"].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+lspconfig.sourcekit.setup({})
