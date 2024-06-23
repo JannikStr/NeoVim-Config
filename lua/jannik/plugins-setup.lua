@@ -56,7 +56,7 @@ return packer.startup(function(use)
 	-- fuzzyfinding
     use("junegunn/fzf")
     use("nvim-lua/popup.nvim")
-    use("nvim-telescope/telescope-fzf-native.nvim")
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
     use("dimaportenko/telescope-simulators.nvim")
     use("folke/todo-comments.nvim")
