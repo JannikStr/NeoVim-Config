@@ -86,9 +86,6 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 
-    -- xbase
-    use({"xbase-lab/xbase", run = 'make install', requires = { 'neovim/nvim-lspconfig', "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" } })
-
 	-- programming language plugins
 	use("simrat39/rust-tools.nvim")
     use("ray-x/go.nvim")

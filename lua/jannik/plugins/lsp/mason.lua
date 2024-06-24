@@ -32,7 +32,8 @@ mason_lspconfig.setup({
 		"marksman",
 		"jedi_language_server",
         "fortls",
-        "texlab"
+        "texlab",
+        "gopls"
 	},
 })
 
@@ -47,5 +48,6 @@ mason_null_ls.setup({
 		"mypy",
 		"pylint",
 		"yamlfmt",
+        "goimports"
 	},
 })
