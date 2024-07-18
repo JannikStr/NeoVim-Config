@@ -35,7 +35,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 -- disable mouse interaction
-opt.mouse = nil
+opt.mouse = ""
 
 opt.iskeyword:append("-")
 
