@@ -5,8 +5,14 @@ local doubleIdentationGroup = api.nvim_create_augroup("DoubleIdentationGroup", {
 })
 
 api.nvim_create_autocmd("FileType", {
-	pattern = { "python", "java", "cpp", "javascript", "rust", "lua" },
+	pattern = { "python", "java", "cpp", "rust", "lua" },
 	command = "set tabstop=4 shiftwidth=4",
+	group = doubleIdentationGroup,
+})
+
+api.nvim_create_autocmd("FileType", {
+	pattern = { "javascript", "html", "htmldjango", "c"},
+	command = "set tabstop=2 shiftwidth=2",
 	group = doubleIdentationGroup,
 })
 
