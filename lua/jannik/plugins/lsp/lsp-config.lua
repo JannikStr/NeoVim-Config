@@ -1,14 +1,9 @@
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status then
-	return
-end
-
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
 	return
 end
 
-local typescript_setup, typescript = pcall(require, "typescript")
+local typescript_setup, typescript = pcall(require, "typescript-tools")
 if not typescript_setup then
 	return
 end
@@ -32,14 +27,14 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 
-	if client.name == "tsserver" then
+	if client.name == "ts_ls" then
 		keymap.set("n", "<Leader>rf", ":TypescriptRenameFile<CR>", opts)
 	end
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig["html"].setup({
+vim.lsp.config('html', {
 	capabilities = capabilities,
 	on_attach = on_attach,
     filetypes = { 'html', 'htmldjango' },
@@ -52,12 +47,12 @@ typescript.setup({
 	},
 })
 
-lspconfig["cssls"].setup({
+vim.lsp.config('cssls', {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["lua_ls"].setup({
+vim.lsp.config("lua_ls", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = { -- custom settings for lua
@@ -77,58 +72,58 @@ lspconfig["lua_ls"].setup({
 	},
 })
 
-lspconfig["rust_analyzer"].setup({
+vim.lsp.config("rust_analyzer", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["bashls"].setup({
+vim.lsp.config("bashls", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["clangd"].setup({
+vim.lsp.config("clangd", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["cmake"].setup({
+vim.lsp.config("cmake", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["dockerls"].setup({
+vim.lsp.config("dockerls", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["jsonls"].setup({
+vim.lsp.config("jsonls", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["jdtls"].setup({
+vim.lsp.config("jdtls", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["julials"].setup({
+vim.lsp.config("julials", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["marksman"].setup({
+vim.lsp.config("marksman", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["jedi_language_server"].setup({
+vim.lsp.config("jedi_language_server", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
 
-lspconfig.fortls.setup{
+vim.lsp.config("fortls", {
 	-- capabilities = capabilities,
 	-- on_attach = on_attach,
     cmd = {
@@ -139,19 +134,19 @@ lspconfig.fortls.setup{
         '--hover_language=fortran',
         '--use_signature_help',
     },
-}
+})
 
-lspconfig["texlab"].setup({
+vim.lsp.config("texlab", {
     capabilities = capabilities,
     on_attach = on_attach,
 })
 
-lspconfig["intelephense"].setup({
+vim.lsp.config("intelephense", {
     on_attach = on_attach,
     capabilities = capabilities
 })
 
-lspconfig["ltex"].setup({
+vim.lsp.config("ltex", {
     on_attach = on_attach,
     cmd = { "ltex-ls" },
     filetypes = {"markdown", "text", "latex", "tex"},
@@ -163,7 +158,7 @@ lspconfig["ltex"].setup({
     }
 })
 
-lspconfig["gopls"].setup({
+vim.lsp.config("gopls", {
     on_attach = on_attach,
     capabilities = capabilities
 })

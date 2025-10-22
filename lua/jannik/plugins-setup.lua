@@ -86,7 +86,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
-	use("jose-elias-alvarez/typescript.nvim")
+	use("pmizio/typescript-tools.nvim")
 	use("onsails/lspkind.nvim")
 
 	-- programming language plugins
@@ -94,7 +94,7 @@ return packer.startup(function(use)
     use("ray-x/go.nvim")
 
 	-- linting
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 
 	use("ntpeters/vim-better-whitespace")

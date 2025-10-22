@@ -65,6 +65,7 @@ keymap.set("n", "<C-e>", "<cmd>Telescope buffers<CR>")
 keymap.set("n", "<Leader>l", "<cmd>Telescope live_grep<CR>")
 keymap.set("n", "<C-e>", "<cmd>Telescope buffers<CR>")
 keymap.set("n", "<C-c>", "<cmd>Telescope git_commits<CR>")
+keymap.set("n", "<Leader>cc", "<cmd>Telescope commands<CR>")
 keymap.set("n", "<Leader>r", "<cmd> lua require('telescope').extensions.asynctasks.all()<CR>")
 if checks.is_git_available() then
 	keymap.set("n", "<Leader>i", "<cmd>Telescope git_files<CR>")
