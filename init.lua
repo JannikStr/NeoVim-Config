@@ -10,6 +10,7 @@ require("jannik.plugins.asynctasks")
 require("jannik.plugins.autopairs")
 require("jannik.plugins.barbar")
 require("jannik.plugins.betterwhitespace")
+require("jannik.plugins.claude-code")
 require("jannik.plugins.codeium")
 require("jannik.plugins.comment")
 require("jannik.plugins.dadbod")
@@ -26,7 +27,6 @@ require("jannik.plugins.typescript-tools")
 require("jannik.plugins.undotree")
 require("jannik.plugins.vimtex")
 require("jannik.plugins.winresizer")
-
 
 --  lsp
 require("jannik.plugins.lsp.lspsaga")

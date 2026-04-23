@@ -71,7 +71,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 
     -- AI
-    use("Exafunction/codeium.vim")
+  use("Exafunction/codeium.vim")
+  use({"greggh/claude-code.nvim", requires = "nvim-lua/plenary.nvim"})
 
 	-- snippets
 	use("L3MON4D3/LuaSnip")
