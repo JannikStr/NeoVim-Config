@@ -12,12 +12,17 @@ saga.setup({
         edit = "<CR>",
     },
     code_action_prompt = {
-        enable = false,
+        enable = true,
     },
     lightbulb = {
         enable = false,
     },
     symbol_in_winbar = {
-        enable = false,
-    }
+        enable = true,
+        hide_keyword = true,
+    },
+})
+
+vim.diagnostic.config({
+    virtual_text = true,
 })

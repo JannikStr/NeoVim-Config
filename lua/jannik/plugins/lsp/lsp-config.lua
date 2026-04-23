@@ -22,7 +22,8 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	keymap.set("n", "<Leader>mq", "<cmd>Lspsaga code_action<CR>", opts)
 	keymap.set("n", "<Leader>mr", "<cmd>Lspsaga rename<CR>", opts)
-	keymap.set("n", "<Leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+	keymap.set("n", "<Leader>dl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+	keymap.set("n", "<Leader>dc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
 	keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
@@ -117,7 +118,7 @@ vim.lsp.config("marksman", {
 	on_attach = on_attach,
 })
 
-vim.lsp.config("jedi_language_server", {
+vim.lsp.config("basedpyright", {
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
@@ -163,7 +164,7 @@ vim.lsp.config("gopls", {
     capabilities = capabilities
 })
 
-lspconfig["tailwindcss"].setup({
+vim.lsp.config("tailwindcss", {
     on_attach = on_attach,
     capabilities = capabilities
 })

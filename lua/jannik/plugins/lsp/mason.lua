@@ -30,10 +30,10 @@ mason_lspconfig.setup({
 		"jdtls",
 		"julials",
 		"marksman",
-		"jedi_language_server",
         "fortls",
         "texlab",
-        "gopls"
+        "gopls",
+        "basedpyright"
 	},
 })
 

@@ -29,6 +29,8 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim")
 
+  use("nvim-neotest/nvim-nio")
+
 	use("bluz71/vim-nightfly-guicolors") -- colorscheme
 
 	-- tmux & split window navigation
@@ -57,7 +59,7 @@ return packer.startup(function(use)
     use("junegunn/fzf")
     use("nvim-lua/popup.nvim")
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+	use({ "nvim-telescope/telescope.nvim", tag = "v0.2.2" })
     use("dimaportenko/telescope-simulators.nvim")
     use("folke/todo-comments.nvim")
 
@@ -95,6 +97,7 @@ return packer.startup(function(use)
 
 	-- linting
 	use("nvimtools/none-ls.nvim")
+	use("nvimtools/none-ls-extras.nvim")
 	use("jayp0521/mason-null-ls.nvim")
 
 	use("ntpeters/vim-better-whitespace")
@@ -104,12 +107,11 @@ return packer.startup(function(use)
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
+        branch = "main",
 		run = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
-
-    use('nvim-treesitter/playground')
 
 	-- auto closing
 	use("windwp/nvim-autopairs")
@@ -117,6 +119,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("tpope/vim-fugitive")
+    -- use("NeogitOrg/neogit")
 	use("airblade/vim-gitgutter")
     use("sindrets/diffview.nvim")
     use("mbbill/Undotree")
@@ -140,6 +143,11 @@ return packer.startup(function(use)
 
     -- Language/Grammar Check
     use('rhysd/vim-grammarous')
+
+    use("MunifTanjim/nui.nvim")
+    use("m4xshen/hardtime.nvim")
+
+    use("ThorstenRhau/token")
 
 	if packer_bootstrap then
 		require("packer").sync()
