@@ -36,8 +36,7 @@ return packer.startup(function(use)
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer") -- maximizing and restoring current views
-    use("simeji/winresizer") -- resizing
-    use("ThePrimeagen/harpoon")
+  use("simeji/winresizer") -- resizing
 
 	-- essentials
 	use("tpope/vim-surround")
@@ -56,12 +55,12 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 
 	-- fuzzyfinding
-    use("junegunn/fzf")
-    use("nvim-lua/popup.nvim")
-    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-	use({ "nvim-telescope/telescope.nvim", tag = "v0.2.2" })
-    use("dimaportenko/telescope-simulators.nvim")
-    use("folke/todo-comments.nvim")
+  use("junegunn/fzf")
+  use("nvim-lua/popup.nvim")
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+  use({ "nvim-telescope/telescope.nvim", tag = "v0.2.2" })
+  use("dimaportenko/telescope-simulators.nvim")
+  use("folke/todo-comments.nvim")
 
 	-- show buffers at top
 	use("romgrk/barbar.nvim")
@@ -78,11 +77,14 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
-    use("honza/vim-snippets")
+  use("honza/vim-snippets")
+
+  use("mfussenegger/nvim-dap")
 
 	-- managing & installing lsp servers, linters & formatters
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
+	use({"williamboman/mason.nvim", commit = "fc98833"})
+	use({"williamboman/mason-lspconfig.nvim", commit = "1a31f82"})
+  use("jay-babu/mason-nvim-dap.nvim")
 
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig")
@@ -93,7 +95,9 @@ return packer.startup(function(use)
 
 	-- programming language plugins
 	use("simrat39/rust-tools.nvim")
-    use("ray-x/go.nvim")
+  use("ray-x/go.nvim")
+  use("ziglang/zig.vim")
+  use("nvim-flutter/flutter-tools.nvim")
 
 	-- linting
 	use("nvimtools/none-ls.nvim")
@@ -101,8 +105,6 @@ return packer.startup(function(use)
 	use("jayp0521/mason-null-ls.nvim")
 
 	use("ntpeters/vim-better-whitespace")
-
-    use("xiyaowong/nvim-transparent")
 
 	-- treesitter
 	use({
@@ -121,33 +123,34 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive")
     -- use("NeogitOrg/neogit")
 	use("airblade/vim-gitgutter")
-    use("sindrets/diffview.nvim")
-    use("mbbill/Undotree")
+  use("sindrets/diffview.nvim")
+  use("mbbill/Undotree")
 
 	-- motions
 	use("easymotion/vim-easymotion")
-    use("ludovicchabant/vim-gutentags")
+  use("ludovicchabant/vim-gutentags")
 
-    -- latex and writing
-    use("lervag/vimtex")
+  -- latex and writing
+  use("lervag/vimtex")
 
-    -- build tasks
-    use("skywind3000/asynctasks.vim")
-    use("skywind3000/asyncrun.vim")
-    use("GustavoKatel/telescope-asynctasks.nvim")
+  -- build tasks
+  use("skywind3000/asynctasks.vim")
+  use("skywind3000/asyncrun.vim")
+  use("GustavoKatel/telescope-asynctasks.nvim")
 
 
-    -- DevOps
-    use("tpope/vim-dadbod")
-    use("kristijanhusak/vim-dadbod-ui")
+  -- DevOps
+  use("tpope/vim-dadbod")
+  use("kristijanhusak/vim-dadbod-ui")
 
-    -- Language/Grammar Check
-    use('rhysd/vim-grammarous')
+  -- Language/Grammar Check
+  use('rhysd/vim-grammarous')
 
-    use("MunifTanjim/nui.nvim")
-    use("m4xshen/hardtime.nvim")
+  use("MunifTanjim/nui.nvim")
+  use("m4xshen/hardtime.nvim")
 
-    use("ThorstenRhau/token")
+  -- Themes
+  use("ThorstenRhau/token")
 
 	if packer_bootstrap then
 		require("packer").sync()

@@ -19,9 +19,9 @@ null_ls.setup({
         diagnostics.mypy.with({
             extra_args={"--ignore-missing-imports"}
         }),
-        require("none-ls.diagnostics.flake8").with({
-            extra_args={"--max-line-length=120", "--ignore", "E402,E501,W504,W601"}
-        }),
+        -- require("none-ls.diagnostics.flake8").with({
+        --     extra_args={"--max-line-length=120", "--ignore", "E402,E501,W504,W601"}
+        -- }),
         -- diagnostics.pycodestyle.with({
         --     extra_args={"--ignore", "E402,E501,W504,W601"}
         -- }),

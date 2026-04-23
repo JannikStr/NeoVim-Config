@@ -11,7 +11,7 @@ api.nvim_create_autocmd("FileType", {
 })
 
 api.nvim_create_autocmd("FileType", {
-	pattern = { "javascript", "html", "htmldjango", "c"},
+	pattern = { "javascript", "c", "cpp", "typescript", "javascriptreact", "typescriptreact" },
 	command = "set tabstop=2 shiftwidth=2",
 	group = doubleIdentationGroup,
 })
