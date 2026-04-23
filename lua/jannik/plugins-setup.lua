@@ -83,8 +83,8 @@ return packer.startup(function(use)
   use("mfussenegger/nvim-dap")
 
 	-- managing & installing lsp servers, linters & formatters
-	use({"williamboman/mason.nvim", commit = "fc98833"})
-	use({"williamboman/mason-lspconfig.nvim", commit = "1a31f82"})
+	use({"williamboman/mason.nvim", tag = "v2.2.1"})
+	use({"williamboman/mason-lspconfig.nvim", tag = "v2.2.0"})
   use("jay-babu/mason-nvim-dap.nvim")
 
 	-- configuring lsp servers
