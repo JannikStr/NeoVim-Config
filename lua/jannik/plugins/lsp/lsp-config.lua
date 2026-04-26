@@ -198,9 +198,9 @@ vim.lsp.config("intelephense", {
     capabilities = capabilities
 })
 
-vim.lsp.config("ltex", {
+vim.lsp.config("ltex_plus", {
     on_attach = on_attach,
-    cmd = { "ltex-ls" },
+    cmd = { "ltex-ls-plus" },
     filetypes = {"markdown", "text", "latex", "tex"},
     flags = { debounce_text_changes = 300 },
     settings = {

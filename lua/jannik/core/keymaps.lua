@@ -7,6 +7,7 @@ local keymap = vim.keymap
 -- general keymaps
 keymap.set({ "v", "n" }, "Y", "y$")
 keymap.set("n", "*", ":keepjumps normal! mi*`i<CR>")
+keymap.set("n", "x", '"_x')
 -- keymap.set("i", "ii", "<ESC>")
 
 keymap.set("v", "<Leader>y", '"*y')
@@ -88,9 +89,6 @@ keymap.set("n", "<Leader>gdo", ":GitGutterDiffOrig<CR>")
 
 --   EasyMotion
 keymap.set("n", "<Leader>", "<Plug>(easymotion-prefix)")
-
---   Toggle Transparency
-keymap.set("n", "<Leader>dt", ":TransparentToggle<CR>")
 
 
 ---------DevOps---------
